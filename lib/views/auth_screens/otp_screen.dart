@@ -76,7 +76,7 @@ class OtpScreen extends StatelessWidget {
                 width: CustomMediaQuery.screenWidth(context) * 0.87,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.toNamed('/otp');
+                    Get.offAllNamed('/homePage');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,

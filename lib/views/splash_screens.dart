@@ -4,68 +4,51 @@ import 'package:garage_app/utiles/mediaquery.dart';
 import 'package:garage_app/utiles/text_style.dart';
 import 'package:get/get.dart';
 
-import '../controllers/splash_controller.dart';
-
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GetBuilder<SplashController>(
-      init: SplashController(),
-      builder: (controller) {
-        return const Scaffold(
-          backgroundColor: Colors.blue,
-          body: Center(
-            child: FlutterLogo(
-              size: 100.0,
-            ),
-          ),
-        );
-      },
-    );
-  }
-}
-
 
 class NextScreen extends StatelessWidget {
   final int index;
   final String title;
   final String headline;
-  final String image;
+  final Widget widget;
 
-  const NextScreen({super.key, required this.index, required this.title, required this.headline, required this.image});
+
+
+  const NextScreen({
+    Key? key,
+    required this.index,
+    required this.title,
+    required this.headline,
+    required this.widget,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              width: double.infinity,
-                child: Image.asset(image, width: double.infinity, height: CustomMediaQuery.screenHeight(context) * 0.5, fit: BoxFit.fill,)),
-            Text(title, style: CustomTextStyle.titleTextStyle,),
-            Text(headline, textAlign: TextAlign.center,style: CustomTextStyle.subtitleTextStyle, ),
+              height: CustomMediaQuery.screenHeight(context) * 0.7,
+              child: widget
+            ),
+
+            Text(title, style: CustomTextStyle.titleTextStyle),
+            Text(headline, textAlign: TextAlign.center, style: CustomTextStyle.subtitleTextStyle),
             const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
-                Get.toNamed(index == 0
-                    ? '/second'
-                    : (index == 1 ? '/third' : '/start'));
+                Get.toNamed(index == 0 ? '/second' : (index == 1 ? '/third' : '/start'));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                      10.0),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
               ),
               child: const Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Icon(Icons.arrow_forward_ios, color: Colors.white,)
+                child: Icon(Icons.arrow_back_ios_new, color: Colors.white),
               ),
             ),
           ],
@@ -75,9 +58,9 @@ class NextScreen extends StatelessWidget {
   }
 }
 
+
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
-
 
   @override
   Widget build(BuildContext context) {

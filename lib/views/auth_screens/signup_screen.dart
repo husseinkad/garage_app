@@ -37,8 +37,14 @@ class SignUpScreen extends StatelessWidget {
           SizedBox(height: CustomMediaQuery.screenHeight(context) * 0.1,),
 
           Image.asset('assets/qrcode.png', scale: 1.5),
-          const Text('اذهب الى الهيأة لتفعيل حسابك', style: CustomTextStyle.titleTextStyle,),
-          const Text('امسح الكود وقم بتفعيل الحساب الخاص بك ك سائق', style: CustomTextStyle.subtitleTextStyle,),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('اذهب الى الهيأة لتفعيل حسابك', style: CustomTextStyle.mediumTitleTextStyle,),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: Text('امسح الكود وقم بتفعيل الحساب الخاص بك ك\nسائق', style: CustomTextStyle.smallSubtitleTextStyle, textAlign: TextAlign.center,),
+          ),
           const Expanded(child: SizedBox()),
           Center(
             child: SizedBox(

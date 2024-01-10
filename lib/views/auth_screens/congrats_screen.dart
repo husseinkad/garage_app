@@ -16,16 +16,20 @@ class CongratsScreen extends StatelessWidget {
         children: [
           SizedBox(height: CustomMediaQuery.screenHeight(context) * 0.1,),
 
-          Image.asset('assets/congrats.png'),
-          const Text('Congrats!', style: CustomTextStyle.titleTextStyleRed,),
-          const Text('Account Registered\nSuccessfully', style: CustomTextStyle.subtitleTextStyle, textAlign: TextAlign.center,),
+          SvgPicture.asset('assets/congrats.svg', width: 200,),
+          SizedBox(height: CustomMediaQuery.screenHeight(context) * 0.03,),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 8.0),
+            child: Text('Congrats!', style: CustomTextStyle.bigTitleTextStyleRed,),
+          ),
+          const Text('Account Registered\nSuccessfully', style: CustomTextStyle.smallSubtitleTextStyle, textAlign: TextAlign.center,),
           const Expanded(child: SizedBox()),
           Center(
             child: SizedBox(
               width: CustomMediaQuery.screenWidth(context) * 0.87,
               child: ElevatedButton(
                 onPressed: () {
-
+                  Get.offAllNamed('/homePage');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
