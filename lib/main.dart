@@ -29,32 +29,36 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/next',
       getPages: [
+
         // onBoarding screens
         GetPage(
             name: '/next',
-            page: () => NextScreen(
+            page: () => const NextScreen(
                   index: 0,
                   title: 'شاهد معلومات سيارتك',
                   headline: 'شاهد معلومات السائق والرحلات الماضية',
-                  widget: page1(),
+                  image: 'assets/carSplashIcon.png',
+                  alignment: Alignment.center,
                 )),
         GetPage(
             name: '/second',
-            page: () => NextScreen(
+            page: () => const NextScreen(
                   index: 1,
                   title: 'تتبع الغرامات المالية',
                   headline:
                       'شاهد الغرامات المرورية المتراكمة على المركبة الخاصة بك',
-                  widget: page2(),
+                  image: 'assets/billSplashIcon.png',
+                  alignment: Alignment.topCenter,
                 )),
         GetPage(
             name: '/third',
-            page: () => NextScreen(
+            page: () => const NextScreen(
                   index: 2,
                   title: 'تنبيهات انتهاء الصلاحية ',
                   headline:
                       'تنبيهات بلغرامات وانتهاء صلاحية البطاقة وكشف الحاسبة ...الخ',
-                  widget: page3(),
+                  image: 'assets/bellSplashIcon.png',
+                  alignment: Alignment.topCenter,
                 )),
         GetPage(name: '/start', page: () => const StartScreen()),
 
@@ -104,19 +108,19 @@ class Home extends StatelessWidget {
             items: [
               BottomNavigationBarItem(
                 icon: SvgPicture.asset('assets/icons/HomePageIcon.svg',
-                    color: _.selectedTab.value == 0 ? Colors.red : Colors.grey
+                    color: _homeController.selectedTab.value == 0 ? Colors.red : Colors.grey
                 ),
                 label: "Home",
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset('assets/icons/RoutingIcon.svg',
-                    color: _.selectedTab.value == 1 ? Colors.red : Colors.grey
+                    color: _homeController.selectedTab.value == 1 ? Colors.red : Colors.grey
                 ),
                 label: "Rotation",
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset('assets/icons/NormalCardIcon.svg',
-                    color: _.selectedTab.value == 2 ? Colors.red : Colors.grey
+                    color: _homeController.selectedTab.value == 2 ? Colors.red : Colors.grey
                 ),
                 label: "Card",
               ),

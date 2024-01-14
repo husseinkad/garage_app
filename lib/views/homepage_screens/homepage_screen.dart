@@ -15,15 +15,52 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+
     return Scaffold(
       appBar: appBar,
-      body: SingleChildScrollView(
+      body: DefaultTabController(
+        length: 2,
+        child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              homePageInfoCard(context),
-              coloredCard(context),
+              const HomePageInfoCardWidget(),
+              const ColoredCardWidget(),
+              Center(
+                child: Container(
+                  width: CustomMediaQuery.screenWidth(context) * 0.93,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: TabBar(
+                    indicator: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    indicatorSize: TabBarIndicatorSize.tab,
+                    indicatorPadding: const EdgeInsets.all(8),
+                    labelColor: Colors.black,
+                    unselectedLabelColor: Colors.grey,
+                    labelStyle: CustomTextStyle.smallBodyTextStyle,
+                    tabs: const [
+                      Tab(text: 'اخر الرحلات',),
+                      Tab(text: 'التحويلات المالية',),
+                    ],
+                  )
+                ),
+              ),
+          
+              const SizedBox(
+                height: 300,
+                child: TabBarView(children: [
+                  Center(child: Text('hiiiiiiiiii')),
+                  Center(child: Text('moooooooooooo')),
+                ]),
+              )
             ],
-          )
+          ),
+        ),
       ),
     );
   }

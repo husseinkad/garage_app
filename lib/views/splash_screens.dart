@@ -1,62 +1,83 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:garage_app/utiles/mediaquery.dart';
 import 'package:garage_app/utiles/text_style.dart';
 import 'package:get/get.dart';
-
 
 class NextScreen extends StatelessWidget {
   final int index;
   final String title;
   final String headline;
-  final Widget widget;
-
-
+  final String image;
+  final Alignment alignment;
 
   const NextScreen({
     Key? key,
     required this.index,
     required this.title,
     required this.headline,
-    required this.widget,
+    required this.image,
+    required this.alignment,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: CustomMediaQuery.screenHeight(context) * 0.7,
-              child: widget
-            ),
-
-            Text(title, style: CustomTextStyle.titleTextStyle),
-            Text(headline, textAlign: TextAlign.center, style: CustomTextStyle.subtitleTextStyle),
-            const SizedBox(height: 40),
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed(index == 0 ? '/second' : (index == 1 ? '/third' : '/start'));
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
+      body: Stack(
+        alignment: alignment,
+        children: [
+          Image.asset(
+            image,
+            fit: BoxFit.contain,
+          ),
+          SizedBox(height: CustomMediaQuery.screenHeight(context) * 0.04),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    title,
+                    style: CustomTextStyle.titleTextStyle,
+                  ),
                 ),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Icon(Icons.arrow_back_ios_new, color: Colors.white),
-              ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    headline,
+                    style: CustomTextStyle.subtitleTextStyle,
+                  ),
+                ),
+                SizedBox(height: CustomMediaQuery.screenHeight(context) * 0.04),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Get.toNamed(index == 0 ? '/second' : (index == 1 ? '/third' : '/start'));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 16),
+                      child: Icon(Icons.arrow_back_ios_new, color: Colors.white),
+                    ),
+                  ),
+                ),
+                SizedBox(height: CustomMediaQuery.screenHeight(context) * 0.04),
+              ],
             ),
-          ],
-        ),
+          ),
+
+        ],
       ),
     );
   }
 }
+
 
 
 class StartScreen extends StatelessWidget {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomTextStyle {
   static const TextStyle titleTextStyle = TextStyle(
-    fontSize: 24.0,
+    fontSize: 22.0,
     fontWeight: FontWeight.bold,
     fontFamily: 'Cairo',
     color: Colors.black,
@@ -61,7 +61,7 @@ class CustomTextStyle {
   );
 
   static const TextStyle titleTextStyleWhite = TextStyle(
-    fontSize: 24.0,
+    fontSize: 22.0,
     fontWeight: FontWeight.bold,
     fontFamily: 'Cairo',
     color: Colors.white,
@@ -80,7 +80,7 @@ class CustomTextStyle {
   );
 
   static const TextStyle titleTextStyleRed = TextStyle(
-    fontSize: 24.0,
+    fontSize: 22.0,
     fontWeight: FontWeight.bold,
     fontFamily: 'Cairo',
     color: Colors.red,

@@ -73,6 +73,7 @@ flutter:
     - assets/icons/CardChargeIcon.svg
     - assets/icons/ArrowCurvedIcon.svg
     - assets/icons/ArrowCurvedBorderIcon.svg
+    - assets/icons/ArrowUpWhiteBackIcon.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
