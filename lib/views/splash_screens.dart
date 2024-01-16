@@ -25,9 +25,12 @@ class NextScreen extends StatelessWidget {
       body: Stack(
         alignment: alignment,
         children: [
-          Image.asset(
-            image,
-            fit: BoxFit.contain,
+          SizedBox(
+
+            child: Image.asset(
+              image,
+              fit: BoxFit.contain,
+            ),
           ),
           SizedBox(height: CustomMediaQuery.screenHeight(context) * 0.04),
           Padding(

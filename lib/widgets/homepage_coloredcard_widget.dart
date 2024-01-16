@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../utiles/mediaquery.dart';
 import '../utiles/text_style.dart';
@@ -54,7 +55,9 @@ class ColoredCardWidget extends StatelessWidget {
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: SvgPicture.asset('assets/icons/ArrowCurvedBorderIcon.svg', width: 25),
+                            child: InkWell(
+                                onTap: (){ Get.toNamed('/ticketsPage'); },
+                                child: SvgPicture.asset('assets/icons/ArrowCurvedBorderIcon.svg', width: 25)),
                           ),
                         )
                       ],
@@ -103,7 +106,10 @@ class ColoredCardWidget extends StatelessWidget {
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: SvgPicture.asset('assets/icons/ArrowCurvedBorderIcon.svg', width: 25),
+                            child: InkWell(
+                                onTap: (){ Get.toNamed('/tripsPage'); },
+                                child: SvgPicture.asset('assets/icons/ArrowCurvedBorderIcon.svg', width: 25)
+                            ),
                           ),
                         )
                       ],

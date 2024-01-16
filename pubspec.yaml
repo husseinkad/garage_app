@@ -64,6 +64,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    # icons
     - assets/icons/HomePageIcon.svg
     - assets/icons/RoutingIcon.svg
     - assets/icons/NormalCardIcon.svg
@@ -74,6 +75,10 @@ flutter:
     - assets/icons/ArrowCurvedIcon.svg
     - assets/icons/ArrowCurvedBorderIcon.svg
     - assets/icons/ArrowUpWhiteBackIcon.svg
+    - assets/icons/moneyBoxIcon.svg
+    - assets/icons/trafficLightIcon.svg
+    - assets/icons/ArrowRiseIcon.svg
+    - assets/icons/BackIcon.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

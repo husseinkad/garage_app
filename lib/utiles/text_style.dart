@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:garage_app/utiles/colors.dart';
 
 class CustomTextStyle {
   static const TextStyle titleTextStyle = TextStyle(
@@ -6,6 +7,20 @@ class CustomTextStyle {
     fontWeight: FontWeight.bold,
     fontFamily: 'Cairo',
     color: Colors.black,
+  );
+
+  static const TextStyle titleTextStyleColorForPinkBg = TextStyle(
+    fontSize: 22.0,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Cairo',
+    color: CustomColors.textColorForPinkBg,
+  );
+
+  static const TextStyle titleTextStyleColorForBlueBg = TextStyle(
+    fontSize: 22.0,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Cairo',
+    color: CustomColors.blueTextColor,
   );
 
   static const TextStyle subtitleTextStyle = TextStyle(
@@ -31,9 +46,8 @@ class CustomTextStyle {
 
   static const TextStyle smallSubtitleTextStyle = TextStyle(
     fontSize: 14.0,
-    fontWeight: FontWeight.w500,
     fontFamily: 'Cairo',
-    color: Colors.grey,
+    color: CustomColors.greyTextColor,
   );
 
   static const TextStyle bodyTextStyle = TextStyle(
@@ -42,10 +56,34 @@ class CustomTextStyle {
     color: Colors.black,
   );
 
+  static const TextStyle tinySubtitleTextStyle = TextStyle(
+    fontSize: 11.0,
+    fontFamily: 'Cairo',
+    color: CustomColors.greyTextColor,
+  );
+
   static const TextStyle smallBodyTextStyle = TextStyle(
     fontSize: 14.0,
     fontFamily: 'Cairo',
     color: Colors.black,
+  );
+
+  static const TextStyle smallBodyTextStyleWhite = TextStyle(
+    fontSize: 14.0,
+    fontFamily: 'Cairo',
+    color: Colors.white,
+  );
+
+  static const TextStyle smallBodyTextStyleColorForPinkBg = TextStyle(
+    fontSize: 14.0,
+    fontFamily: 'Cairo',
+    color: CustomColors.textColorForPinkBg,
+  );
+
+  static const TextStyle smallBodyTextStyleColorForBlueBg = TextStyle(
+    fontSize: 14.0,
+    fontFamily: 'Cairo',
+    color: CustomColors.blueTextColor,
   );
 
   static const TextStyle smallBodyTextStyleSize9 = TextStyle(
@@ -57,7 +95,7 @@ class CustomTextStyle {
   static const TextStyle smallBodyTextStyleSize12pink = TextStyle(
     fontSize: 12.0,
     fontFamily: 'Cairo',
-    color: Colors.pink,
+    color: CustomColors.pinkTextColor,
   );
 
   static const TextStyle titleTextStyleWhite = TextStyle(
