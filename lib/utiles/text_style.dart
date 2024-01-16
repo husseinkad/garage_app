@@ -23,6 +23,7 @@ class CustomTextStyle {
     color: CustomColors.blueTextColor,
   );
 
+
   static const TextStyle subtitleTextStyle = TextStyle(
     fontSize: 18.0,
     fontWeight: FontWeight.w500,
@@ -44,6 +45,13 @@ class CustomTextStyle {
     color: Colors.grey,
   );
 
+  static const TextStyle smallTitleTextStyle = TextStyle(
+    fontSize: 16.0,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Cairo',
+    color: Colors.black,
+  );
+
   static const TextStyle smallSubtitleTextStyle = TextStyle(
     fontSize: 14.0,
     fontFamily: 'Cairo',
@@ -57,7 +65,7 @@ class CustomTextStyle {
   );
 
   static const TextStyle tinySubtitleTextStyle = TextStyle(
-    fontSize: 11.0,
+    fontSize: 10.0,
     fontFamily: 'Cairo',
     color: CustomColors.greyTextColor,
   );
@@ -92,10 +100,22 @@ class CustomTextStyle {
     color: Colors.black,
   );
 
+  static const TextStyle smallBodyTextStyleSize9White = TextStyle(
+    fontSize: 9.0,
+    fontFamily: 'Cairo',
+    color: Colors.white,
+  );
+
   static const TextStyle smallBodyTextStyleSize12pink = TextStyle(
     fontSize: 12.0,
     fontFamily: 'Cairo',
     color: CustomColors.pinkTextColor,
+  );
+
+  static const TextStyle smallBodyTextStyleSize12 = TextStyle(
+    fontSize: 12.0,
+    fontFamily: 'Cairo',
+    color: CustomColors.textColor,
   );
 
   static const TextStyle titleTextStyleWhite = TextStyle(

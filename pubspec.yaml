@@ -79,6 +79,8 @@ flutter:
     - assets/icons/trafficLightIcon.svg
     - assets/icons/ArrowRiseIcon.svg
     - assets/icons/BackIcon.svg
+    - assets/icons/cardRemoveIcon.svg
+    - assets/icons/notificationsRedBgIcon.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

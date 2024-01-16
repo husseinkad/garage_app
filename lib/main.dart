@@ -6,8 +6,9 @@ import 'package:garage_app/views/auth_screens/login_screen.dart';
 import 'package:garage_app/views/auth_screens/signup_screen.dart';
 import 'package:garage_app/views/homepage_screens/tickets_screen.dart';
 import 'package:garage_app/views/homepage_screens/trips_screen.dart';
+import 'package:garage_app/views/notifications_screen.dart';
+import 'package:garage_app/views/profile_page.dart';
 import 'package:garage_app/views/splash_screens.dart';
-import 'package:garage_app/widgets/splash_screen_widgets.dart';
 import 'package:get/get.dart';
 
 import 'views/auth_screens/otp_screen.dart';
@@ -78,6 +79,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/homePage', page: () => Home()),
         GetPage(name: '/ticketsPage', page: () => const TicketsScreen()),
         GetPage(name: '/tripsPage', page: () => const TripsScreen()),
+        GetPage(name: '/notificationsPage', page: () => const NotificationsScreen()),
+        GetPage(name: '/profilePage', page: () => const ProfilePage()),
       ],
       home: Home(),
       builder: (context, child) {
