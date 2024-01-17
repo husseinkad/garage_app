@@ -13,7 +13,8 @@ class LastTrips extends StatelessWidget {
     return ListView.builder(
         reverse: true,
         physics: const NeverScrollableScrollPhysics(),
-        itemCount: 5,
+        shrinkWrap: true,
+        itemCount: 8,
         itemBuilder: (context, index){
           return Container(
             margin: const EdgeInsets.all(6),

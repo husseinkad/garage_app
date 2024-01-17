@@ -15,7 +15,7 @@ class PayFeesButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: CustomMediaQuery.screenWidth(context) * 1,
+      width: CustomMediaQuery.screenWidth(context) * 0.91,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: FloatingActionButton(

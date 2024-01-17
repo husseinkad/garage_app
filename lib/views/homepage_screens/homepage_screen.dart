@@ -12,6 +12,7 @@ import 'package:garage_app/widgets/last_trips_widget.dart';
 import '../../widgets/card_transformation_widget.dart';
 import '../../widgets/homepage_appbar_widget.dart';
 import '../../widgets/homepage_infocard_widget.dart';
+import 'package:autoscale_tabbarview/autoscale_tabbarview.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,6 +22,7 @@ class HomePage extends StatelessWidget {
 
 
     return Scaffold(
+
       appBar: appBar,
       body: DefaultTabController(
         length: 2,
@@ -64,16 +66,13 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  height: 400,
-                  width: CustomMediaQuery.screenWidth(context) * 0.95,
-                  child: const TabBarView(children: [
-                    LastTrips(),
-                    CardTransformation(),
-                  ]),
-                ),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: AutoScaleTabBarView (
+                    children: [
+                  LastTrips(),
+                  CardTransformation(),
+                ]),
               )
             ],
           ),

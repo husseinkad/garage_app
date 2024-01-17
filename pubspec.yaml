@@ -38,6 +38,10 @@ dependencies:
   get: ^4.6.6
   http: ^1.1.2
   flutter_svg: ^2.0.9
+  cached_network_image: ^3.3.1
+  google_maps_flutter: ^2.5.3
+  autoscale_tabbarview: ^1.0.2
+  fl_chart: ^0.66.0
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +85,11 @@ flutter:
     - assets/icons/BackIcon.svg
     - assets/icons/cardRemoveIcon.svg
     - assets/icons/notificationsRedBgIcon.svg
+    - assets/icons/chairsIcon.svg
+    - assets/icons/gasStationIcon.svg
+    - assets/icons/languageIcon.svg
+    - assets/icons/messageIcon.svg
+    - assets/icons/personIcon.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

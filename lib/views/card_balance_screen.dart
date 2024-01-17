@@ -74,11 +74,8 @@ class CardBalanceScreen extends StatelessWidget {
               child: Text('التحويلات المالية', style: CustomTextStyle.smallTitleTextStyle,),
             ),
 
-            Center(
-              child: SizedBox(
-                  height: 400,
-                  width: CustomMediaQuery.screenWidth(context) * 0.95,
-                  child: const CardTransformations()),
+            const Center(
+              child: CardTransformations(),
             ),
           ],
         ),
@@ -94,9 +91,10 @@ class CardTransformations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-     //   reverse: true,
+        reverse: true,
         physics: const NeverScrollableScrollPhysics(),
-        itemCount: 4,
+        shrinkWrap: true,
+        itemCount: 7,
         itemBuilder: (context, index){
           return Container(
             margin: const EdgeInsets.all(6),

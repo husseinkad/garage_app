@@ -12,6 +12,7 @@ class CardTransformation extends StatelessWidget {
     return ListView.builder(
       reverse: true,
         physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
       itemCount: 5,
         itemBuilder: (context, index){
           return Container(

@@ -3,9 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class PathLineScreen extends StatelessWidget {
   const PathLineScreen({super.key});
+
+  static const CameraPosition _kGooglePlex = CameraPosition(
+    target: LatLng(37.42796133580664, -122.085749655962),
+    zoom: 14.4746,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class PathLineScreen extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
-                color: Colors.white,
+                color: Colors.transparent,
                 width: 3,
               ),
               boxShadow: const [
@@ -52,9 +58,10 @@ class PathLineScreen extends StatelessWidget {
           )
         ],
       ),
-        body: SizedBox(
-          height: double.infinity,
-            child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMU8a0hLEtHk_-d4qCFvAxjTgQjbg84JHxZ8aDAGXjH73duaopKaTnQeAeXyjI9DiNWuM&usqp=CAU', fit: BoxFit.cover)),
+        body: const GoogleMap(
+          initialCameraPosition: _kGooglePlex,
+          mapType: MapType.normal,
+        )
     );
   }
 }
